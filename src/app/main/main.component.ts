@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  nome: any;
   constructor() { }
 
   ngOnInit() {
+    this.nome = localStorage.getItem('teste');
   }
 
 }
