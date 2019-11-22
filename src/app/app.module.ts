@@ -8,6 +8,7 @@ import {MatToolbarModule} from '@angular/material';
 import { CustomHeaderComponent } from './components/custom-header/custom-header.component';
 import {ConstantsService} from './components/constants/constants.service';
 import {HttpClientModule} from '@angular/common/http';
+import {UserLoginRequest} from './components/classes/requests/user-login-request';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatToolbarModule,
     HttpClientModule
   ],
-  providers: [ConstantsService],
+  providers: [ConstantsService, UserLoginRequest],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

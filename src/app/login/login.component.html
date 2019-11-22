@@ -4,15 +4,15 @@
   </div>
   <div>
     <mat-form-field>
-      <input matInput placeholder="Usuário" name="ev">
+      <input matInput placeholder="Usuário" (input)="inputUsername = $event.target.value" [value]="inputUsername">
     </mat-form-field>
   </div>
   <div>
     <mat-form-field>
-      <input matInput placeholder="Senha">
+      <input matInput placeholder="Senha" (input)="inputPassword = $event.target.value" [value]="inputPassword">
     </mat-form-field>
   </div>
-  <div>
-    <button mat-raised-button (click)="onLogin()" color="accent">Dale</button>
+  <div id="divButton">
+    <button mat-raised-button (click)="onLogin()" color="accent">Entrar</button>
   </div>
 </div>
