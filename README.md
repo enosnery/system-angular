@@ -1,6 +1,6 @@
 #SYSTEMA V0.1
 
-##Classes importantes
+##Notas importantes
  - Para criação de novas páginas (components) utilizar comando ng gererate component {nomeDoComponente} 
  - Novas rotas no arquivo app-routing.module.ts. Exemplo de rota: " { path: 'novaRota', loadChildren: () => import('./nova-rota/nova-rota.module').then(m => m.NovaRotaModule) },"
  - Utilizar ngx-toastr para exibir mensagens de retorno para o usuário (DOCS -> https://www.npmjs.com/package/ngx-toastr)
