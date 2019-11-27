@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoggedUser} from '../components/classes/model/logged-user';
 
 @Component({
   selector: 'app-main',
@@ -7,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  nome: any;
+  loggedUser: LoggedUser;
   constructor() { }
 
   ngOnInit() {
-    this.nome = localStorage.getItem('teste');
+    this.loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+  }
+
+  goBack() {
+
   }
 
 }

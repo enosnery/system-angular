@@ -6,6 +6,8 @@ import { LoginComponent } from './login.component';
 
 import { MatButtonModule, MatFormFieldModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
+import {FormsModule} from '@angular/forms';
+import {ToastContainerModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -14,7 +16,9 @@ import {MatInputModule} from '@angular/material';
     LoginRoutingModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ToastContainerModule
   ]
 })
 export class LoginModule { }

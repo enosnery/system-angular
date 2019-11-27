@@ -7,8 +7,15 @@
 }
 
 button{
-  width: 17vw !important;
+
   margin-top: 20px;
+  padding-right: 3em;
+  padding-left: 3em;
   font-size: 1.2em;
   font-stretch: expanded;
+}
+
+#responseMessage{
+  margin-top: 20px;
+  font-style: italic;
 }

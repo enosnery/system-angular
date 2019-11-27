@@ -9,6 +9,8 @@ import { CustomHeaderComponent } from './components/custom-header/custom-header.
 import {ConstantsService} from './components/constants/constants.service';
 import {HttpClientModule} from '@angular/common/http';
 import {UserLoginRequest} from './components/classes/requests/user-login-request';
+import {FormsModule} from '@angular/forms';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,14 @@ import {UserLoginRequest} from './components/classes/requests/user-login-request
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-center',
+      preventDuplicates: true,
+    }),
+    BrowserAnimationsModule
   ],
   providers: [ConstantsService, UserLoginRequest],
   bootstrap: [AppComponent]
