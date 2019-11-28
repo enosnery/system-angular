@@ -5,6 +5,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserLoginRequest} from '../components/classes/requests/user-login-request';
 import {LoginResponse} from '../components/classes/responses/login-response';
 import {ToastrService} from 'ngx-toastr';
+import {LoggedUser} from '../components/classes/model/logged-user';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
   private inputUsername = '';
   private inputPassword = '';
   private message = '';
+  loggedUser: LoggedUser;
 
   constructor(private router: Router, private constants: ConstantsService, private http: HttpClient, private user: UserLoginRequest,
               private toastr: ToastrService) { }
@@ -25,6 +27,12 @@ export class LoginComponent implements OnInit {
     })
   };
   ngOnInit() {
+    if (localStorage.length > 0) {
+      this.loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+      if (this.loggedUser.token !== undefined && this.loggedUser.token !== '') {
+        this.router.navigateByUrl('main', {skipLocationChange: true});
+      }
+    }
   }
   onLogin() {
   if (this.inputUsername === '') {

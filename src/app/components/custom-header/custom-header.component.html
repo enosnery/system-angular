@@ -1,4 +1,12 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
 <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 <mat-menu #menu="matMenu">Teste</mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">Teste</mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">Teste</mat-menu>
+  <div layout="row" flex layout-align="end center">
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">Teste</mat-menu>
+  </div>
 </mat-toolbar>

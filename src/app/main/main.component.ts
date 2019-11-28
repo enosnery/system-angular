@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoggedUser} from '../components/classes/model/logged-user';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,14 +10,15 @@ import {LoggedUser} from '../components/classes/model/logged-user';
 export class MainComponent implements OnInit {
 
   loggedUser: LoggedUser;
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit() {
     this.loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
   }
 
   goBack() {
-
+  localStorage.clear();
+  this.router.navigateByUrl('');
   }
 
 }

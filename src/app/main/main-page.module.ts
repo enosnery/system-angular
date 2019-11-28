@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
-import {MatButtonModule, MatMenuModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule} from '@angular/material';
 import {CustomHeaderComponent} from '../components/custom-header/custom-header.component';
+import {MainMenuCardComponent} from '../components/main-menu-card/main-menu-card.component';
+
 
 
 @NgModule({
-  declarations: [MainComponent, CustomHeaderComponent],
+  declarations: [MainComponent, CustomHeaderComponent, MainMenuCardComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
+    MatCardModule,
   ]
 })
-export class MainModule { }
+export class MainPageModule { }
