@@ -4,3 +4,14 @@ img{
 mat-card{
   width: 192px;
 }
+
+a, a:hover, a:focus, a:active{
+  text-decoration: none;
+  color: inherit;
+}
+
+mat-card-header, mat-card-content{
+  padding: 10px;
+}
+
+

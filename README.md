@@ -1,5 +1,8 @@
 #SYSTEMA V0.1
 
+##Cores utilizadas no projeto
+- Cores do ícone (favicon): Background: #3F51B5, Imagem: #F9B713
+
 ##Notas importantes
  - Para criação de novas páginas (components) utilizar comando ng gererate component {nomeDoComponente} 
  - Novas rotas no arquivo app-routing.module.ts. Exemplo de rota: " { path: 'novaRota', loadChildren: () => import('./nova-rota/nova-rota.module').then(m => m.NovaRotaModule) },"

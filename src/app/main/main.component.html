@@ -1,6 +1,6 @@
 <app-custom-header></app-custom-header>
 <div class="main-body">
-<app-main-menu-card></app-main-menu-card>
+<app-main-menu-card [title]=""></app-main-menu-card>
 <p>main {{loggedUser.name}} works!</p>
 <button mat-raised-button (click)="goBack()" color="warn">Voltar</button>
 <button mat-raised-button routerLink="../cadastro" color="warn">Cadastro</button>
