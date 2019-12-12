@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class ConstantsService {
   readonly baseURL: string = 'http://localhost:8084/';
   readonly login: string = 'login';
+  readonly menuList: string = 'menu';
   readonly userName: string = 'userName';
 
   constructor() { }

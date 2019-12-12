@@ -11,7 +11,7 @@ export class MainMenuCardComponent implements OnInit {
   @Input()
   content: string;
   @Input()
-  img: string;
+  imagem: string;
 
   constructor() { }
 
