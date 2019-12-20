@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   private inputUsername = '';
   private inputPassword = '';
   private message = '';
+  private isLogging = false;
   loggedUser: LoggedUser;
 
   constructor(private router: Router, private constants: ConstantsService, private http: HttpClient, private user: UserLoginRequest,
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit {
     }
   }
   onLogin() {
+  this.isLogging = true;
   if (this.inputUsername === '') {
     this.toastr.error('Favor preencher os campos obrigatórios');
     return;
@@ -48,6 +50,7 @@ export class LoginComponent implements OnInit {
   this.user.username = this.inputUsername;
   this.user.password = this.inputPassword;
   console.log(JSON.stringify(this.user));
+  setTimeout(() => {}, 3000);
   this.http.post<LoginResponse>(this.constants.baseURL + this.constants.login, JSON.stringify(this.user) , this.httpOptions)
     .subscribe(data => {
       console.log(data);
@@ -59,6 +62,7 @@ export class LoginComponent implements OnInit {
         this.toastr.error(data.message);
         this.inputPassword = '';
       }
+      this.isLogging = false;
     });
   }
 

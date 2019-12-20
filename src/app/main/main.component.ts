@@ -26,9 +26,10 @@ export class MainComponent implements OnInit {
         Authorization: this.loggedUser.token
       })
     };
-    this.http.post<MenuList>(this.constants.baseURL + this.constants.menuList, null, httpOptions)
+    this.http.get<MenuList>(this.constants.baseURL + this.constants.menuList, httpOptions)
         .subscribe(data => {
-          console.log(data);
+          this.menuList = data.list;
+          console.log(this.menuList[0].content);
         });
   }
 

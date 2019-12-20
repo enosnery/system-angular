@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 
-import { MatButtonModule, MatFormFieldModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatProgressSpinnerModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {ToastContainerModule} from 'ngx-toastr';
@@ -18,7 +18,8 @@ import {ToastContainerModule} from 'ngx-toastr';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    ToastContainerModule
+    ToastContainerModule,
+    MatProgressSpinnerModule
   ]
 })
 export class LoginModule { }

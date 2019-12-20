@@ -16,6 +16,7 @@ export class MainMenuCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.content);
   }
 
   testCard() {
