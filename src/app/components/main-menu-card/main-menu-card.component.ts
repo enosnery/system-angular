@@ -20,6 +20,6 @@ export class MainMenuCardComponent implements OnInit {
   }
 
   testCard() {
-    alert('teste');
+    alert(this.title);
   }
 }

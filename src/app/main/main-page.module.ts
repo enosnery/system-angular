@@ -11,6 +11,9 @@ import {MainMenuCardComponent} from '../components/main-menu-card/main-menu-card
 
 @NgModule({
   declarations: [MainComponent, CustomHeaderComponent, MainMenuCardComponent],
+  exports: [
+    CustomHeaderComponent
+  ],
   imports: [
     CommonModule,
     MainRoutingModule,

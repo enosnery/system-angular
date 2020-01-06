@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {UserLoginRequest} from './components/classes/requests/user-login-request';
 import {FormsModule} from '@angular/forms';
 import {ToastrModule} from 'ngx-toastr';
+import {CadastroModule} from './cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {ToastrModule} from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CadastroModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,

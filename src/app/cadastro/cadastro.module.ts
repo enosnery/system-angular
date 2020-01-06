@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {CadastroUsuarioComponent} from './cadastro-usuario/cadastro-usuario.component';
+import {CadastroRoutingModule} from './cadastro-routing.module';
 
-import { CadastroRoutingModule } from './cadastro-routing.module';
-import { CadastroComponent } from './cadastro.component';
-import {MatButtonModule} from '@angular/material';
 
 
 @NgModule({
-  declarations: [CadastroComponent],
+  declarations: [CadastroUsuarioComponent],
   imports: [
     CommonModule,
-    CadastroRoutingModule,
-    MatButtonModule
+    CadastroRoutingModule
   ]
 })
 export class CadastroModule { }

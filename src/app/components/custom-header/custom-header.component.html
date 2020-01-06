@@ -1,12 +1,13 @@
 <mat-toolbar color="primary">
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">Teste</mat-menu>
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">Teste</mat-menu>
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">Teste</mat-menu>
-  <div layout="row" flex layout-align="end center">
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">Teste</mat-menu>
-  </div>
+  <button mat-flat-button [matMenuTriggerFor]="menu">Menu</button>
+
+  <span class="fill-blank"></span>
+  <button mat-raised-button color="accent" (click)="goBack()">Sair</button>
 </mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">Cadastro</button>
+</mat-menu>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item routerLink="../cadastro">Usuário</button>
+</mat-menu>

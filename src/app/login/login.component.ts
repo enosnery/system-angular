@@ -6,6 +6,7 @@ import {UserLoginRequest} from '../components/classes/requests/user-login-reques
 import {LoginResponse} from '../components/classes/responses/login-response';
 import {ToastrService} from 'ngx-toastr';
 import {LoggedUser} from '../components/classes/model/logged-user';
+import {MenuList} from '../components/classes/responses/menu-list';
 
 @Component({
   selector: 'app-login',
@@ -56,8 +57,19 @@ export class LoginComponent implements OnInit {
       console.log(data);
       if (data.code === 1 ) {
         const loggedUser = data.user;
-        localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-        this.router.navigateByUrl('main', {skipLocationChange: true});
+        localStorage.setItem(this.constants.loggedUser, JSON.stringify(loggedUser));
+        this.loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+        const httpOptions = {
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json',
+            Authorization: this.loggedUser.token
+          })
+        };
+        this.http.get<MenuList>(this.constants.baseURL + this.constants.menuList, httpOptions)
+          .subscribe(response => {
+           localStorage.setItem(this.constants.menuList, JSON.stringify(response.list));
+           this.router.navigateByUrl('main', {skipLocationChange: true});
+          });
       } else if (data.code === 0) {
         this.toastr.error(data.message);
         this.inputPassword = '';
