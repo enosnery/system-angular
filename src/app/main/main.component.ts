@@ -20,6 +20,9 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   this.loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+  if (this.loggedUser == null) {
+    this.router.navigateByUrl('');
+  }
   // this.menuList = JSON.parse(localStorage.getItem('menuItems'));
   }
 
