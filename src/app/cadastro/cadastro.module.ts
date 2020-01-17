@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CadastroUsuarioComponent} from './cadastro-usuario/cadastro-usuario.component';
 import {CadastroRoutingModule} from './cadastro-routing.module';
+import {MainPageModule} from '../main/main-page.module';
+import {MatTableModule} from '@angular/material';
 
 
 
@@ -9,7 +11,9 @@ import {CadastroRoutingModule} from './cadastro-routing.module';
   declarations: [CadastroUsuarioComponent],
   imports: [
     CommonModule,
-    CadastroRoutingModule
+    CadastroRoutingModule,
+    MainPageModule,
+    MatTableModule
   ]
 })
 export class CadastroModule { }

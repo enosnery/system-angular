@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {ConstantsService} from '../../components/constants/constants.service';
+import {UserListResponse} from '../../components/classes/responses/user-list-response';
+import {User} from '../../components/classes/model/user';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -7,9 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroUsuarioComponent implements OnInit {
 
-  constructor() { }
+private userList: Array<User>;
+
+  constructor(private router: Router, private http: HttpClient, private constants: ConstantsService) { }
 
   ngOnInit() {
+    this.http.get<UserListResponse>(this.constants.baseURL + this.constants.userList).subscribe((data) => {
+
+      }
+    );
   }
 
 }
