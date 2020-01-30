@@ -13,11 +13,14 @@ import {User} from '../../components/classes/model/user';
 export class CadastroUsuarioComponent implements OnInit {
 
 private userList: Array<User>;
+private columns: string[] = ['id', 'name', 'login', 'email', 'type' ];
 
   constructor(private router: Router, private http: HttpClient, private constants: ConstantsService) { }
 
   ngOnInit() {
     this.http.get<UserListResponse>(this.constants.baseURL + this.constants.userList).subscribe((data) => {
+      console.log(data);
+      this.userList = data.users;
 
       }
     );
