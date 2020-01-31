@@ -1,6 +1,6 @@
-import {User} from '../model/user';
+import {UserListItem} from '../model/user-list-item';
 
 export interface UserListResponse {
   code: number;
-  users: Array<User>;
+  users: Array<UserListItem>;
 }

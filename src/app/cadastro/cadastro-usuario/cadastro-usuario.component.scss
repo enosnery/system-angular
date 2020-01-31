@@ -1,0 +1,23 @@
+.row-item:nth-child(even){
+  background: white;
+}
+
+.row-item:nth-child(odd){
+  background: #C6E2FF;
+}
+
+.row-item{
+  cursor: pointer;
+}
+
+.row-item:hover{
+  background: royalblue;
+}
+
+.row-item:hover mat-cell{
+  color: whitesmoke;
+}
+
+mat-header-cell{
+  font-size: 1em;
+}

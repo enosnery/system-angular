@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {CadastroUsuarioComponent} from './cadastro-usuario/cadastro-usuario.component';
 import {CadastroRoutingModule} from './cadastro-routing.module';
 import {MainPageModule} from '../main/main-page.module';
-import {MatTableModule} from '@angular/material';
+import {MatIconModule, MatPaginatorModule, MatTableModule} from '@angular/material';
 
 
 
@@ -13,7 +13,9 @@ import {MatTableModule} from '@angular/material';
     CommonModule,
     CadastroRoutingModule,
     MainPageModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule,
+    MatPaginatorModule
   ]
 })
 export class CadastroModule { }
