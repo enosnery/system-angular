@@ -4,11 +4,12 @@ import {CadastroUsuarioComponent} from './cadastro-usuario/cadastro-usuario.comp
 import {CadastroRoutingModule} from './cadastro-routing.module';
 import {MainPageModule} from '../main/main-page.module';
 import {MatIconModule, MatPaginatorModule, MatTableModule, MatToolbarModule} from '@angular/material';
+import {CadastroUsuarioDetalheComponent} from './cadastro-usuario/cadastro-usuario-detalhe/cadastro-usuario-detalhe.component';
 
 
 
 @NgModule({
-  declarations: [CadastroUsuarioComponent],
+  declarations: [CadastroUsuarioComponent, CadastroUsuarioDetalheComponent],
   imports: [
     CommonModule,
     CadastroRoutingModule,
