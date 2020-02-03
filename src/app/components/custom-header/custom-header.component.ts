@@ -18,4 +18,8 @@ export class CustomHeaderComponent implements OnInit {
     this.router.navigateByUrl('');
   }
 
+  goToMenu(route) {
+    this.router.navigateByUrl(route);
+  }
+
 }

@@ -1,0 +1,23 @@
+@import "src/custom-theme";
+
+mat-form-field{
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+mat-expansion-panel-header{
+  font-size: 23px;
+  height: 2em;
+}
+mat-tab{
+  color: $secondary;
+}
+
+.codigo{
+  color: black;
+}
+
+.fill-blank{
+  flex: 1 1 auto;
+}
+

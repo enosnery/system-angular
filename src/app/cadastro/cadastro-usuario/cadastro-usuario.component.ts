@@ -35,7 +35,7 @@ private pageEvent: PageEvent;
   }
 
   goToDetail(variabl) {
-    alert(variabl);
+    this.router.navigate(['/cadastro/usuario/detalhe/', variabl ]);
   }
 
   updateList(event) {

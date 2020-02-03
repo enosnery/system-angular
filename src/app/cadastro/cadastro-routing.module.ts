@@ -6,7 +6,7 @@ import {CadastroUsuarioDetalheComponent} from './cadastro-usuario/cadastro-usuar
 
 const routes: Routes = [
   { path: 'cadastro/usuario', component: CadastroUsuarioComponent },
-  {path: 'cadastro/usuario/:id', component: CadastroUsuarioDetalheComponent}
+  {path: 'cadastro/usuario/detalhe/:id', component: CadastroUsuarioDetalheComponent}
   ];
 
 @NgModule({

@@ -1,5 +1,32 @@
 <app-custom-header></app-custom-header>
 <mat-toolbar>
-  <p>Detalhes do Usuário</p>
+  <p>Detalhes do Usuário </p>
+  <span class="fill-blank"></span>
+  <button mat-raised-button color="warn" (click)="deleteUser()">Excluir</button>
 </mat-toolbar>
-<p>cadastro-usuario-detalhe works!</p>
+<mat-tab-group>
+  <mat-tab label="Dados Pessoais" >
+  <mat-form-field>
+    <input class="codigo" matInput placeholder="Código" disabled value="{{user.id}}"/>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Nome" value="{{user.name}}"/>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Login" value="{{user.login}}"/>
+  </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Senha" type="password"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="E-mail" value="{{user.email}}"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tipo de Usuário</mat-label>
+      <mat-select [(value)]="user.type">
+        <mat-option value=0>Básico</mat-option>
+        <mat-option value=1>Administrador</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-tab>
+</mat-tab-group>

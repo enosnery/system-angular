@@ -5,9 +5,10 @@
   <button mat-raised-button color="accent" (click)="goBack()">Sair</button>
 </mat-toolbar>
 <mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="goToMenu('main')">Principal</button>
   <button mat-menu-item [matMenuTriggerFor]="subMenu">Cadastro</button>
 </mat-menu>
 
 <mat-menu #subMenu="matMenu">
-  <button mat-menu-item routerLink="../cadastro/usuario">Usuário</button>
+  <button mat-menu-item (click)="goToMenu('cadastro/usuario')">Usuário</button>
 </mat-menu>
