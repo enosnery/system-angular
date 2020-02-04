@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ConstantsService} from '../../../components/constants/constants.service';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -10,7 +10,8 @@ import {GeneralResponse} from '../../../components/classes/responses/general-res
 @Component({
   selector: 'app-cadastro-usuario-detalhe',
   templateUrl: './cadastro-usuario-detalhe.component.html',
-  styleUrls: ['./cadastro-usuario-detalhe.component.scss']
+  styleUrls: ['./cadastro-usuario-detalhe.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class CadastroUsuarioDetalheComponent implements OnInit {
   private id: number;
