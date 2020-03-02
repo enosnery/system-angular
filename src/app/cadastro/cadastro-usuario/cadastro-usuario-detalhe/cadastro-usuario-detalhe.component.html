@@ -2,10 +2,11 @@
 <mat-toolbar>
   <p>Detalhes do Usuário </p>
   <span class="fill-blank"></span>
-  <button mat-raised-button color="warn" (click)="deleteUser()">Excluir</button>
+  <button mat-raised-button color="accent" (click)="navigateBack()">Voltar</button>
 </mat-toolbar>
 <mat-tab-group>
   <mat-tab label="Dados Pessoais" >
+    <div class="cadastro-container">
   <mat-form-field>
     <input class="codigo" matInput placeholder="Código" disabled value="{{user.id}}"/>
   </mat-form-field>
@@ -28,5 +29,6 @@
         <mat-option value=1>Administrador</mat-option>
       </mat-select>
     </mat-form-field>
+    </div>
   </mat-tab>
 </mat-tab-group>

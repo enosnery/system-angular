@@ -13,6 +13,7 @@ import {
   MatToolbarModule
 } from '@angular/material';
 import {CadastroUsuarioDetalheComponent} from './cadastro-usuario/cadastro-usuario-detalhe/cadastro-usuario-detalhe.component';
+import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
 
 
 
@@ -31,7 +32,8 @@ import {CadastroUsuarioDetalheComponent} from './cadastro-usuario/cadastro-usuar
     MatInputModule,
     MatButtonModule,
     MatTabsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFabMenuModule
   ]
 })
 export class CadastroModule { }

@@ -17,9 +17,8 @@ export class ConstantsService {
   // User
   readonly userName: string = 'userName';
   readonly loggedUser: string = 'loggedUser';
-  readonly userList: string = 'users/list';
-  readonly userDetail: string = 'users/getUser?id=';
-  readonly userDelete: string = 'users/deleteUser?id=';
+  readonly user: string = 'user';
+  readonly userParam: string = 'user/';
 
   constructor() { }
 }

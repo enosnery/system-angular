@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {ConstantsService} from '../../components/constants/constants.service';
 import {UserListResponse} from '../../components/classes/responses/user-list-response';
-import {User} from '../../components/classes/model/user';
 import {UserListItem} from '../../components/classes/model/user-list-item';
 import {PageEvent} from '@angular/material';
 
@@ -24,7 +23,7 @@ private pageEvent: PageEvent;
   constructor(private router: Router, private http: HttpClient, private constants: ConstantsService) { }
 
   ngOnInit() {
-    this.http.get<UserListResponse>(this.constants.baseURL + this.constants.userList).subscribe((data) => {
+    this.http.get<UserListResponse>(this.constants.baseURL + this.constants.user).subscribe((data) => {
       console.log(data);
       this.userList = data.users;
       this.listSize = this.userList.length;
@@ -34,8 +33,8 @@ private pageEvent: PageEvent;
     );
   }
 
-  goToDetail(variabl) {
-    this.router.navigate(['/cadastro/usuario/detalhe/', variabl ]);
+  goToDetail(id) {
+    this.router.navigate(['/cadastro/usuario/detalhe/', id ]);
   }
 
   updateList(event) {
